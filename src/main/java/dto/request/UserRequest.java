@@ -12,10 +12,18 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class CreateUserRequest {
+public class UserRequest {
     @SerializedName("name")
     String userName;
 
     @SerializedName("job")
     String jobName;
+
+    public UserRequest(String name, boolean isEmptyJob) {
+        this.userName = name;
+    }
+
+    public UserRequest(String job) {
+        this.jobName = job;
+    }
 }

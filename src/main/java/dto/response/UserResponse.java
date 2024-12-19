@@ -13,7 +13,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 
-public class CreateUserResponse {
+public class UserResponse {
     @SerializedName("name")
     String userName;
 
